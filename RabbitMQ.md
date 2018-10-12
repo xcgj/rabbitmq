@@ -334,6 +334,7 @@ channel.basic_consume(callback, queue='task')
 channel.start_consuming()
 ```
 - 客户端调用
+
 终端1：
 ```shell
 c01@c01:~/rabbitmqTest/2_workQueue$ python work.py
@@ -381,6 +382,7 @@ connection.close()
 发布者无需声明队列，队列的声明和绑定在客户端完成
 
 - 服务器调用
+
 消息发出后，如果没用订阅者，消息将被丢弃，也没有队列存储消息
 ```shell
 c01@c01:~/rabbitmqTest/3_pubsub$ python pub.py
@@ -421,6 +423,7 @@ print ' [*] Waiting for logs. To exit press CTRL+C'
 channel.start_consuming()
 ```
 - 客户端调用
+
 终端1：信息显示在终端
 ```shell
 c01@c01:~/rabbitmqTest/3_pubsub$ python sub.py
@@ -522,6 +525,7 @@ print(' [*] Waiting for logs. To exit press CTRL+C')
 channel.start_consuming()
 ```
 - 客户端调用
+
 终端1：消息直接显示在终端，且接收info warning error级别的log
 ```shell
 c01@c01:~/rabbitmqTest/4_routing$ python receive.py info warning error
@@ -685,6 +689,7 @@ correlation_id（关联标识）的作用:一个客户端可能有多个RPC请�
 > 5、客户端等待回调队列里的数据。当有消息出现的时候，它会检查correlation_id属性。如果此属性的值与请求匹配，将它返回给应用。
 
 - 服务器
+
 计算斐波那契数列的和
 ```python
 #!/usr/bin/env python
