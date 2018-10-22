@@ -226,6 +226,13 @@ sudo rabbitmqctl list_queues name messages_ready messages_unacknowledged
 sudo rabbitmqctl list_bindings
 ```
 
+- 清空所有持久性队列
+```shell
+sudo rabbitmqctl stop_app
+sudo rabbitmqctl reset
+sudo rabbitmqctl start_app
+```
+
 # 代码实例
 代码参考：[http://rabbitmq.mr-ping.com/AMQP/AMQP_0-9-1_Model_Explained.html](http://rabbitmq.mr-ping.com/AMQP/AMQP_0-9-1_Model_Explained.html)
 ## 单线程队列模式
