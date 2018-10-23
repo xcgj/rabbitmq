@@ -226,6 +226,11 @@ sudo rabbitmqctl list_queues name messages_ready messages_unacknowledged
 sudo rabbitmqctl list_bindings
 ```
 
+- 清空指定队列中的消息
+```shell
+sudo rabbitmqctl purge_queue queue_name
+```
+
 - 清空所有持久性队列
 ```shell
 sudo rabbitmqctl stop_app
